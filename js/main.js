@@ -6,8 +6,20 @@ console.log(arrayImages);
 for( let i = 1; i <= arrayImages.length; i++){
     console.log(i);
 
-    // Creo una variabile per il nostro "".container".
+    // Creo una variabile per il nostro ".container".
     let contenitore = document.querySelector(".container");
+
+    // Creo una variabile per il nostro ".carousel".
+    let carousel = document.querySelector(".carousel");
+
+    // Aggiungo il "carousel" all'interno del "contenitore".
+    contenitore.append(carousel);
+
+    // Creo una variabile per il nostro ".elements-container"
+    let elementsContainer = document.querySelector(".elemets-container");
+
+    // Aggiungo il "elementsContainer" all'interno del "carousel".
+    carousel.append(elementsContainer);
 
     // Creo 5 "div" per quante saranno le immagini.
     let element = document.createElement("div");
@@ -15,7 +27,18 @@ for( let i = 1; i <= arrayImages.length; i++){
     // Aggiungo una classe ai "div".
     element.classList.add("element");
 
-    // Al contenitore vado ad aggiungerci l'elemento al suo interno.
-    contenitore.append(element);
+    // Al "elementsContainer" vado ad aggiungerci i "div".
+    elementsContainer.append(element);
 
+    // Creo la prima Immagine.
+    let image01 = document.createElement("img");
+
+    // Inserisco l'immagine in "image"
+    image01.src = "./img/01.webp";
+
+    // A "element" vado ad aggiungerci l'"img" al suo interno.
+    element.append(image01);
+
+    image01 = [1];
+    
 }
