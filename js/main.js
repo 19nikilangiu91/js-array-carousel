@@ -13,27 +13,9 @@ let elementsContainer = document.querySelector(".elemets-container");
 // Aggiungo il "elementsContainer" all'interno del "carousel".
 carousel.append(elementsContainer);
 
-// Creo 5 "div" per quante saranno le immagini.
-let element = document.createElement("div");
-
-// Aggiungo una classe ai "div".
-element.classList.add("element");
-
-// Al "elementsContainer" vado ad aggiungerci i "div".
-elementsContainer.append(element);
-
 // Creo un variabile per il nostro Array.
 let arrayImages = [1,2,3,4,5];
 console.log(arrayImages);
-
-// Creo la prima Immagine.
-let image = document.createElement("img");
-
-// Inserisco l'immagine in "image"
-image.src = "./img/01.webp";
-
-// A "element" vado ad aggiungerci l'"img" al suo interno.
-element.append(image);
 
 // Creo una variabile sull'"active".
 let activeElement = 1;
@@ -49,20 +31,36 @@ myButtonUp.addEventListener("click",
         for( let i = 1; i <= arrayImages; i++){
         console.log(i);
 
-        image.src = "./img/02.webp";
+        // Creo i "div".
+        let element = document.createElement("div");
 
-        image.src = "./img/03.webp";
+        // Aggiungo una classe ai "div".
+        element.classList.add("element");
+
+        // Creo la prima Immagine.
+        let image = document.createElement("img");
+
+        // A "element" vado ad aggiungerci l'"img" al suo interno.
+        element.append(image);
+                
+        // Inserisco l'immagine in "image".
+        image.src = "./img/01.webp";
+                
+
+        // image.src = "./img/02.webp";
+
+        // image.src = "./img/03.webp";
         
-        image.src = "./img/04.webp";
+        // image.src = "./img/04.webp";
         
-        image.src = "./img/05.webp";
+        // image.src = "./img/05.webp";
         
-        image.src = "./img/06.webp";
+        // image.src = "./img/06.webp";
         }
 
-        if(activeElement < arrayImages - 1){
-            // Toglamo la classe "active" al elemento corrente.
-        }
+        // if(activeElement < arrayImages - 1){
+        //     // Toglamo la classe "active" al elemento corrente.
+        // }
     
     
     }  
