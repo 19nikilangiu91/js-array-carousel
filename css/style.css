@@ -1,0 +1,50 @@
+/* General Rules */
+.container{
+    width: 80%;
+    height: 500px;
+    margin: 100px auto;
+    /* DEBUG */
+    background-color: red;
+}
+
+.carousel{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 100px auto;
+    /* DEBUG */
+    background-color: blue;
+}
+
+.element.active{
+    display: block;
+
+}
+
+.element{
+    display: none;
+}
+
+img{
+    width: 100%;
+    height: 500px;
+}
+.prev.hidden{
+    position: absolute;
+    top: 10px;
+    left: 48%;
+    padding: 5px 10px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+.next{
+    position: absolute;
+    bottom: 10px;
+    left: 48%;
+    padding: 5px 10px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+}
