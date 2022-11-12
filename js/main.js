@@ -1,18 +1,3 @@
-// Creo una variabile per il nostro ".container".
-let contenitore = document.querySelector(".container");
-
-// Creo una variabile per il nostro ".carousel".
-let carousel = document.querySelector(".carousel");
-
-// Aggiungo il "carousel" all'interno del "contenitore".
-contenitore.append(carousel);
-
-// Creo una variabile per il nostro ".elements-container"
-let elementsContainer = document.querySelector(".elemets-container");
-
-// Aggiungo il "elementsContainer" all'interno del "carousel".
-carousel.append(elementsContainer);
-
 // Creo l'arrey per le nostre immagini.
 
 let imageArray = [];
@@ -53,8 +38,8 @@ let activeIteam = 0;
 // Collego i bottoni "prev" e "next".
 let buttonPrev = document.querySelector(".prev");
 
-// il bottone prev da "hidden" diventerà "active".
-buttonPrev.classList.add("hidden")
+// il bottone prev da "active" div".
+buttonPrev.classList.add("hidden");
 
 let buttonNext = document.querySelector(".next");
 
@@ -73,15 +58,42 @@ buttonNext.addEventListener("click",
             // Aggiungiamo la classe "active" all'elemento successivo.
             divElementArrey[activeIteam].classList.add("active");
 
-        };
+        }
 
+        // Nacondiamo il bottone "next".
         if (activeIteam === divElementArrey.length - 1) {
             buttonNext.classList.add("hidden");
         }
 
+        // Attiviamo il bottone "prev".
         if (activeIteam > 0) {
             buttonPrev.classList.remove("hidden");
             
+        }
+    }
+);
+
+buttonPrev.addEventListener("click",
+
+    function(){
+        if(activeIteam > 0){
+        // Togliamo la classe "active" all'elemento corrente.
+        divElementArrey[activeIteam].classList.remove("active");
+        }
+        // Decrementiamo l'indice dell'elemento da visualizzare.
+        activeIteam --;
+
+        // Aggiungiamo la classe "active" all'elemento successivo.
+        divElementArrey[activeIteam].classList.add("active");
+
+        // Nacondiamo il bottone "prev".
+        if (activeIteam === 0) {
+            buttonPrev.classList.add("hidden");
+        }
+
+        // Attiviamo il bottone "next".
+        if (activeIteam < 4) {
+            buttonNext.classList.remove("hidden");
         }
     }
 );
