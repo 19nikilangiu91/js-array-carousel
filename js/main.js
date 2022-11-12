@@ -42,3 +42,13 @@ for (let i = 0; i < imageArray.length; i++) {
     div.append (imageArray[i]);
     element.append (div);
 }
+
+// Colleghiamo al "div element" la classe "Active".
+
+let divElementArrey = document.querySelector(".element");
+divElementArrey.classList.add("active");
+
+let ActiveIteam = 0;
+
+
+
